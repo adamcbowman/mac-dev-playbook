@@ -44,6 +44,11 @@ homebrew_installed_packages:
   - cowsay
   - openssl
   - lolcat
+  - kubernetes-cli
+  - kubernetes-helm
+  - kubectx
+  - minikube
+  
 homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
