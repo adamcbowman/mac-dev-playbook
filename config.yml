@@ -48,7 +48,7 @@ dotfiles_repo_local_destination: ~/Documents/gitrepos/dotfiles
 dotfiles_files:
   - .zshrc
   - .kubectl_aliases
-  - config
+  - .config
   - .git
   - .gitconfig
 homebrew_installed_packages:
@@ -103,7 +103,7 @@ pip_packages: []
 #   version: "0.16.3" # default: N/A
 
 # Set to 'true' to configure Sublime Text.
-configure_sublime: false
+configure_sublime: true
 sublime_base_path: '~/Library/Application Support/Sublime Text'
 sublime_config_path: "Packages/User"
 sublime_package_control:
