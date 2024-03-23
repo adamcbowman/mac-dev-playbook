@@ -50,14 +50,13 @@ dotfiles_files:
   - .kubectl_aliases
   - config
   - .git
-
+  - .gitconfig
 homebrew_installed_packages:
   - git
   - gh
   - go
   - nmap
   - node
-  - nvm
   - cowsay
   - lolcat
   - kubernetes-cli
@@ -69,6 +68,7 @@ homebrew_installed_packages:
   - terraform
   - ssh-copy-id
   - neovim
+  - starship
 
 homebrew_taps: [homebrew/cask-versions]
 
