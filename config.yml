@@ -1,9 +1,9 @@
 ---
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: true
+configure_dotfiles: false
 configure_terminal: true
-configure_osx: true
+configure_osx: false
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: true
@@ -21,6 +21,9 @@ dockitems_remove:
   - Music
   - News
   - FaceTime 
+  - Freeform
+  - Reminders
+  - Calendar
 dockitems_persist:
 - name: "Firefox"
   path: "/Applications/Firefox.app/"
@@ -55,28 +58,17 @@ homebrew_installed_packages:
   - node
   - nvm
   - cowsay
-  - openssl
   - lolcat
   - kubernetes-cli
   - kubernetes-helm
   - kubectx
   - minikube
+  - docker-desktop
 
-homebrew_taps: []
+homebrew_taps: [homebrew/cask-versions]
 
 homebrew_cask_appdir: /Applications
-homebrew_cask_apps: []
-  #- chromedriver
-  #- docker-desktop
-  #- firefox
-  #- firefox-developer-edition
-  #- google-chrome
-  #- sublime-text
-  #- visual-studio-code
-  #- warp
-  #- lunar
-  #- raspberry-pi-imager 
-
+homebrew_cask_apps: [firefox, firefox-developer-edition, google-chrome, docker, warp, lunar, raspberry-pi-imager, visual-studio-code, sublime-text]
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
