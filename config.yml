@@ -1,9 +1,9 @@
 ---
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: false
+configure_dotfiles: true
 configure_terminal: true
-configure_osx: false
+configure_osx: true
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: true
@@ -49,6 +49,8 @@ dotfiles_files:
   - .zshrc
   - .vimrc
   - .kubectl_aliases
+  - config
+  - .git
 
 homebrew_installed_packages:
   - git
@@ -64,6 +66,10 @@ homebrew_installed_packages:
   - kubectx
   - minikube
   - speedtest-cli
+  - wget
+  - terraform
+  - ssh-copy-id
+  - neovim
 
 homebrew_taps: [homebrew/cask-versions]
 
