@@ -56,6 +56,7 @@ homebrew_cask_apps:
   - sublime-text
   - visual-studio-code
   - warp
+  - lunar
 
 
 # See `geerlingguy.mas` role documentation for usage instructions.
