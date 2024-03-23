@@ -63,6 +63,7 @@ homebrew_installed_packages:
   - kubernetes-helm
   - kubectx
   - minikube
+  - speedtest-cli
 
 homebrew_taps: [homebrew/cask-versions]
 
