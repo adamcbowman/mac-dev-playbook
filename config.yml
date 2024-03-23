@@ -8,14 +8,20 @@ configure_osx: true
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: true
 dockitems_remove:
-  - Launchpad
+  - Safari
   - TV
   - Podcasts
   - 'App Store'
   - FaceTime
 dockitems_persist:
+- name: "Firefox"
+  path: "/Applications/Firefox.app/"
+  pos: 3
 - name: "Visual Studio Code"
   path: "/Applications/Visual Studio Code.app/"
+  pos: 4
+- name: "Warp"
+  path: "/Applications/Warp.app/"
   pos: 5
 
 configure_sudoers: false
@@ -48,7 +54,7 @@ homebrew_installed_packages:
   - kubernetes-helm
   - kubectx
   - minikube
-  
+
 homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
@@ -62,6 +68,8 @@ homebrew_cask_apps:
   - visual-studio-code
   - warp
   - lunar
+  - raspberry-pi-imager
+  - 
 
 
 # See `geerlingguy.mas` role documentation for usage instructions.
