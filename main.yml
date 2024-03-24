@@ -11,6 +11,16 @@
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
+    
+    - name: Install oh-my-zsh.
+      shell: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      args:
+        creates: ~/.oh-my-zsh
+      tags: ['oh-my-zsh']
+
+    - name: Brew upgrade
+      command: brew upgrade
+      tags: ['homebrew']
 
   roles:
     - role: elliotweiser.osx-command-line-tools
@@ -35,9 +45,9 @@
       when: configure_terminal
       tags: ['terminal']
 
-    # - import_tasks: tasks/osx.yml
-    #   when: configure_osx
-    #   tags: ['osx']
+    - import_tasks: tasks/osx.yml
+      when: configure_osx
+      tags: ['osx']
 
     - import_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']
