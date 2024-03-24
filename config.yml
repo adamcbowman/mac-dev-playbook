@@ -8,22 +8,22 @@ configure_osx: false
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: true
 dockitems_remove:
-  - TV
-  - Podcasts
   - 'App Store'
-  - FaceTime
-  - Maps
-  - Mail
-  - Messages
-  - Photos
+  - Calendar
   - Contacts
+  - FaceTime
+  - FaceTime 
   - FreeForm
+  - Freeform
+  - Mail
+  - Maps
+  - Messages
   - Music
   - News
-  - FaceTime 
-  - Freeform
+  - Photos
+  - Podcasts
   - Reminders
-  - Calendar
+  - TV
 dockitems_persist:
 - name: "Firefox"
   path: "/Applications/Firefox.app/"
@@ -47,31 +47,32 @@ dotfiles_repo_version: main
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Documents/gitrepos/dotfiles
 dotfiles_files:
-  - .zshrc
-  - .kubectl_aliases
   - .config
   - .git
   - .gitconfig
+  - .kubectl_aliases
+  - .zshrc
 homebrew_installed_packages:
-  - git
-  - gh
-  - go
-  - nmap
-  - nvm
-  - node
+  - awscli
   - cowsay
-  - lolcat
+  - gh
+  - git
+  - go
+  - kubectx
   - kubernetes-cli
   - kubernetes-helm
-  - kubectx
+  - lolcat
   - minikube
-  - speedtest-cli
-  - wget
-  - terraform
-  - ssh-copy-id
   - neovim
+  - node
+  - nmap
+  - nvm
+  - ssh-copy-id
+  - speedtest-cli
   - starship
-
+  - terraform
+  - wget
+  
 homebrew_taps: [homebrew/cask-versions]
 
 homebrew_cask_appdir: /Applications
