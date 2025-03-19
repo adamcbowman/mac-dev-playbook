@@ -72,6 +72,15 @@ homebrew_installed_packages:
   - starship
   - terraform
   - wget
+  - jq
+  - yq
+  - k9s
+  - eks-node-viewer
+  - eksctl
+  - helm
+  - tmux
+  - watch
+  - ddev
   
 homebrew_taps: [homebrew/cask-versions]
 
