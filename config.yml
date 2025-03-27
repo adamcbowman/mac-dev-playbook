@@ -31,9 +31,9 @@ dockitems_persist:
 - name: "Visual Studio Code"
   path: "/Applications/Visual Studio Code.app/"
   pos: 4
-- name: "Warp"
-  path: "/Applications/Warp.app/"
-  pos: 5
+- name: "iTerm2"
+  path: "/Applications/iTerm.app"
+  pos: 6
 
 configure_sudoers: false
 sudoers_custom_config: ''
@@ -52,6 +52,7 @@ dotfiles_files:
   - .gitconfig
   - .kubectl_aliases
   - .zshrc
+  - .tmux.conf
 homebrew_installed_packages:
   - awscli
   - cowsay
@@ -62,7 +63,6 @@ homebrew_installed_packages:
   - kubernetes-cli
   - kubernetes-helm
   - lolcat
-  - minikube
   - neovim
   - node
   - nmap
@@ -70,22 +70,19 @@ homebrew_installed_packages:
   - ssh-copy-id
   - speedtest-cli
   - starship
-  - terraform
   - wget
   - jq
   - yq
   - k9s
-  - eks-node-viewer
   - eksctl
   - helm
   - tmux
   - watch
-  - ddev
   
-homebrew_taps: [homebrew/cask-versions]
+homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
-homebrew_cask_apps: [firefox, firefox-developer-edition, google-chrome, docker, warp, lunar, raspberry-pi-imager, visual-studio-code, sublime-text]
+homebrew_cask_apps: [1password-cli, iterm2, font-jetbrains-mono-nerd-font, font-fira-code-nerd-font, firefox, google-chrome, docker, warp, lunar, raspberry-pi-imager, visual-studio-code, sublime-text] #1password]
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
