@@ -12,7 +12,6 @@ dockitems_remove:
   - Calendar
   - Contacts
   - FaceTime
-  - FaceTime 
   - FreeForm
   - Freeform
   - Mail
@@ -24,98 +23,152 @@ dockitems_remove:
   - Podcasts
   - Reminders
   - TV
+  - Warp
 dockitems_persist:
-- name: "Firefox"
-  path: "/Applications/Firefox.app/"
-  pos: 3
-- name: "Visual Studio Code"
-  path: "/Applications/Visual Studio Code.app/"
-  pos: 4
-- name: "iTerm2"
-  path: "/Applications/iTerm.app"
-  pos: 6
+  - name: "Firefox"
+    path: "/Applications/Firefox.app/"
+    pos: 1
+  - name: "Ghostty"
+    path: "/Applications/Ghostty.app/"
+    pos: 2
+  - name: "Visual Studio Code"
+    path: "/Applications/Visual Studio Code.app/"
+    pos: 3
+  - name: "Obsidian"
+    path: "/Applications/Obsidian.app/"
+    pos: 4
+  - name: "Slack"
+    path: "/Applications/Slack.app/"
+    pos: 5
+  - name: "Claude"
+    path: "/Applications/Claude.app/"
+    pos: 6
 
 configure_sudoers: false
 sudoers_custom_config: ''
-# Example:
-# sudoers_custom_config: |
-#   # Allow users in admin group to use sudo with no password.
-#   %admin ALL=(ALL) NOPASSWD: ALL
 
 dotfiles_repo: https://github.com/adamcbowman/dotfiles.git
-dotfiles_repo_version: main
+dotfiles_repo_version: dgi-macbook
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Documents/gitrepos/dotfiles
 dotfiles_files:
-  - .config
-  - .git
-  - .gitconfig
-  - .kubectl_aliases
   - .zshrc
+  - .zshenv
+  - .zprofile
+  - .gitconfig
   - .tmux.conf
+  - .aliases
+  - .sshrc
+  - .sshrc.d
+  - .vimrc
+  - .config/ghostty
+  - .config/nvim
+  - .config/starship.toml
+  - .config/sketchybar
+  - .config/tmux
+  - .config/k9s
+  - .config/lazygit
+  - .aerospace.toml
+
 homebrew_installed_packages:
-  - awscli
-  - cowsay
-  - gh
+  # Core
   - git
-  - go
-  - kubectx
-  - kubernetes-cli
-  - kubernetes-helm
-  - lolcat
-  - neovim
+  - gh
   - node
-  - nmap
   - nvm
-  - ssh-copy-id
-  - speedtest-cli
-  - starship
+  - go
   - wget
   - jq
   - yq
+  - nmap
+  - ssh-copy-id
+  - speedtest-cli
+  # Shell
+  - zoxide
+  - fzf
+  - eza
+  - starship
+  - tmux
+  - sshrc
+  - viddy
+  # Kubernetes
+  - awscli
+  - kubernetes-cli
+  - kubernetes-helm
+  - helm
+  - kubectx
   - k9s
   - eksctl
-  - helm
-  - tmux
-  - watch
-  
-homebrew_taps: []
+  - argocd
+  - stern
+  - kubecolor
+  # Dev tools
+  - neovim
+  - lazygit
+  - delta
+  - ripgrep
+  - fd
+  # Infrastructure
+  - openconnect
+  - pam-reattach
+  - ykman
+  # Extras
+  - lolcat
+  - cowsay
+
+homebrew_taps:
+  - homebrew/cask-fonts
 
 homebrew_cask_appdir: /Applications
-homebrew_cask_apps: [1password-cli, iterm2, font-jetbrains-mono-nerd-font, font-fira-code-nerd-font, firefox, google-chrome, docker, warp, lunar, raspberry-pi-imager, visual-studio-code, sublime-text] #1password]
+homebrew_cask_apps:
+  # Fonts
+  - font-jetbrains-mono-nerd-font
+  - font-hack-nerd-font
+  - font-sketchybar-app-font
+  # Terminal / Dev
+  - ghostty
+  - visual-studio-code
+  - docker
+  # Browsers
+  - firefox
+  - google-chrome
+  # Productivity
+  - obsidian
+  - claude
+  - 1password
+  - 1password-cli
+  # Work
+  - slack
+  - spotify
+  # Mac utilities
+  - aerospace
+  - sketchybar
+  - borders
+  - lunar
+  # Misc
+  - raspberry-pi-imager
 
-# See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_apps: []
+# App Store apps - requires being signed into App Store
+# mas list to find app IDs
+mas_installed_apps:
+  - { id: 937984704, name: "Amphetamine" }
+  - { id: 506189836, name: "Harvest" }
 mas_email: ""
 mas_password: ""
 
 osx_script: "~/.osx --no-restart"
 
-# Install packages from other package managers.
-# Note: You are responsible for making sure the required package managers are
-# installed, eg. through homebrew.
 composer_packages: []
-# - name: drush
-#   state: present # present/absent, default: present
-#   version: "^8.1" # default: N/A
 gem_packages: []
-# - name: bundler
-#   state: present # present/absent/latest, default: present
-#   version: "~> 1.15.1" # default: N/A
-npm_packages: []
-# - name: webpack
-#   state: present # present/absent/latest, default: present
-#   version: "^2.6" # default: N/A
-pip_packages: []
-# - name: mkdocs
-#   state: present # present/absent/latest, default: present
-#   version: "0.16.3" # default: N/A
 
-# Set to 'true' to configure Sublime Text.
+npm_packages: []
+
+pip_packages: []
+
+# Sublime Text disabled - using nvim
 configure_sublime: false
 sublime_base_path: '~/Library/Application Support/Sublime Text'
 sublime_config_path: "Packages/User"
 sublime_package_control: []
 
-# Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
