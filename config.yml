@@ -115,6 +115,9 @@ homebrew_installed_packages:
   # Extras
   - lolcat
   - cowsay
+  - btop
+  - yazi
+  - helm-diff
 
 homebrew_taps:
   - homebrew/cask-fonts
@@ -145,6 +148,8 @@ homebrew_cask_apps:
   - sketchybar
   - borders
   - lunar
+  - tunnelblick
+  - aws-vpn-client
   # Misc
   - raspberry-pi-imager
 
