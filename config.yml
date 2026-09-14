@@ -148,7 +148,6 @@ homebrew_cask_apps:
   - sketchybar
   - borders
   - lunar
-  - tunnelblick
   - aws-vpn-client
   # Misc
   - raspberry-pi-imager
